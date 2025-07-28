@@ -8,7 +8,7 @@ with open(archivo_m3u, "r", encoding="utf-8") as f:
     rutas_audios = [line.strip() for line in f if not line.startswith("#") and line.strip()]
 
 # Cargar el modelo de Whisper
-modelo = whisper.load_model("base")  # Cambiá "base" por "small", "medium", o "large" si querés más precisión
+modelo = whisper.load_model("medium")  # Cambiá "base" por "small", "medium", o "large" si querés más precisión
 
 # Transcribir cada archivo de audio
 for ruta_audio in rutas_audios:
